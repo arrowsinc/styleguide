@@ -1,19 +1,19 @@
-Ruby Coding Guide
+# Ruby Coding Guide
 
-# 参考
+## 参考
 http://bojovs.com/2012/04/24/ruby-coding-style/
 https://github.com/framgia/coding-standards/blob/master/ja/ruby/standard.md
 https://github.com/bbatsov/ruby-style-guide
 https://github.com/cookpad/styleguide/blob/master/ruby.ja.md#%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE
 
-# 基本
+## 基本
 * インデントは2文字空白を使用する。タブは使用しない。
 * 1行の文字数は基本80文字とする(全角文字は2文字)。長くなったとしても120文字を超えない。
 * 式の途中で改行する場合は、2行目以降を1行目より1段深くインデントする。
 * 行末に空白を置かない。
 * ファイルの末尾に空行を置かない。
 
-# スペースの入れ方
+## スペースの入れ方
 
 * カンマ、コロン、セミコロンの前にはスペースを入れず、後ろにスペースを入れる。
 * 演算子の前後にはスペースを入れる。
@@ -26,7 +26,7 @@ e = M * c**2 # べき乗の演算子の前後にはスペースを入れない
 [1, 2, 3].each { |e| puts e }
 ```
 
-# 文字列
+## 文字列
 * 文字列の結合は使用せず、式展開を使用する```"#{str1}...#{str2}```。
 * 1変数のみの式展開```"#{str}"```は使用しない。
 * 式展開やバックスラッシュ記法( \t や \n など) を使用しない場合はシングルクォートを使用する。
@@ -39,7 +39,7 @@ paragraphs.each do |paragraph|
 end
 ```
 
-# 配列、ハッシュ
+## 配列、ハッシュ
 
 * 空配列、空ハッシュは```[]```、```{}```と書く。```Array.new```、```Hash.new``` は使わない。
 * 文字列配列は%記法 ```%w(...)```を用いて書く。
@@ -53,7 +53,7 @@ end
 {hoge: 1, fuga: 2}
 ```
 
-# 条件式
+## 条件式
 
 * ```if !condition``` の代わりに ```unless condition``` を使う。
 * ```while !condition``` の代わりに ```until condition``` を使う。
@@ -64,7 +64,7 @@ end
 * 条件部には括弧を利用しない。
 
 
-# caseメソッド
+## caseメソッド
 * ```case``` 式と ```when``` 節のインデントは同じ深さにします。 ただし、 case 式を変数に代入するときは when 節に合わせず、単純なインデントで記述します。
 
 ```ruby
@@ -93,7 +93,7 @@ kind = case year
        end
 ```
 
-# eachメソッド
+## eachメソッド
 
 * ```for``` 式は使用せず、```each``` メソッドを使用する。
 * 1行で記述されるブロックには中括弧 ```{...}``` を使用する。
