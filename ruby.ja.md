@@ -1,10 +1,10 @@
 # Ruby Coding Guide
 
 ## 参考
-http://bojovs.com/2012/04/24/ruby-coding-style/
-https://github.com/framgia/coding-standards/blob/master/ja/ruby/standard.md
-https://github.com/bbatsov/ruby-style-guide
-https://github.com/cookpad/styleguide/blob/master/ruby.ja.md#%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE
+http://bojovs.com/2012/04/24/ruby-coding-style/<br>
+https://github.com/framgia/coding-standards/blob/master/ja/ruby/standard.md<br>
+https://github.com/bbatsov/ruby-style-guide<br>
+https://github.com/cookpad/styleguide/blob/master/ruby.ja.md#%E6%AD%A3%E8%A6%8F%E8%A1%A8%E7%8F%BE<br>
 
 ## 基本
 * インデントは2文字空白を使用する。タブは使用しない。
