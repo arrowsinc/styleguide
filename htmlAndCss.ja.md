@@ -21,6 +21,20 @@ Ruby on Rails Guides に従う。
 
 ※ app/assets 内のファイル内でさらにどのようにディレクトリ構成を行うかは今後の検討事項となる。
 
+## 命名について
+class名、id名、Sassの変数名等に利用する変数名はBEMをカスタマイズしたものを意識して検討する。
+* blockName_elementName-modifierName
+  * blockName → 大きな塊の定義名（メインページ、フォームなど）
+  * _elementName → 要素名（ボタン、タイトルなど）
+  * -modifierName → 状態（押した、オンマウスなど）
+* 英単語は極端に省略しすぎない。第三者が閲覧した場合に理解できるかどうかを念頭において決定する。
+  * 分かりやすい省略は推奨する。例：button → btn
+* ただし既存定義に明確なルールがある場合は既存のものを優先する。
+* 上記に捕われすぎないこと。
+* 参考：[BEMを参考にしたCSS設計](http://qiita.com/mrd-takahashi/items/07dc3b4bad027daa2884)
+* 参考：[実践 めんどうくさくない BEM](http://tsmd.hateblo.jp/entry/2013/12/12/004059)
+
+
 ## マークアップ方針
 * 新規に書く場合はSMACSSを意識する。
 * 今後柔軟にするため、要検討事項となる。
@@ -185,13 +199,7 @@ color: #ffffff;
 * 積極的に変数を用いて定義すること。
   * 0 もしくは 100% 以外の数値を繰り返して使用する場合は変数として定義する。
   * 白もしくは黒以外の色の定義も可能な限り変数を用いる。
-  * 変数名の命名時はBEMっぽさを意識して考える（以下のように心がける）。
-  * blockName_elementName-modifierName
-    * blockName → 大きな塊の定義名（メインページ、フォームなど）
-    * _elementName → 要素名（ボタン、タイトルなど）
-    * -modifierName → 状態（押した、オンマウスなど）
-    * 参考：[BEMを参考にしたCSS設計](http://qiita.com/mrd-takahashi/items/07dc3b4bad027daa2884)
-    * ただし既存定義に明確なルールがある場合は既存のものを優先する。
+  * 変数の命名については上記のBEMについてを参考にする。
 
 ```sass
 //数値
