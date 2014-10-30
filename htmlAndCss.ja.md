@@ -19,7 +19,7 @@ Ruby on Rails Guides に従う。
 * lib/assets は複数アプリケーションにまたがって利用されるライブラリファイル置き場
 * vendor/assets はVendor(サードパーティ)製ライブラリファイル置き場
 
-※ app/assets 内のファイル内でさらにどのようにディレクトリ構成を行うかは今後の検討事項となる。
+※ app/assets 内のファイル内でさらにどのようにディレクトリ構成を行うかはCSS設計方針に準じる。
 
 ## 命名について
 class名、id名、Sassの変数名等に利用する変数名はBEMをカスタマイズしたものを意識して検討する。
@@ -35,14 +35,37 @@ class名、id名、Sassの変数名等に利用する変数名はBEMをカスタ
 * 参考：[実践 めんどうくさくない BEM](http://tsmd.hateblo.jp/entry/2013/12/12/004059)
 
 
-## マークアップ方針
-* 新規に書く場合はSMACSSを意識する。
-* 今後柔軟にするため、要検討事項となる。
-* 参考：[今必要なCSSアーキテクチャ](http://www.slideshare.net/MayuKimura/css-25547100)
-* 参考：[HOW-I-IMPROVED-MY-WORKFLOW-WITH-SMACSS-SASS](http://bramsmulders.com/how-i-improved-my-workflow-with-smacss-sass.html)
-* また、以下に記載するコーディングルールに縛られすぎないこと。
+## CSS設計方針
+* SMACSSを意識して作成する。
+  * 参考：[今必要なCSSアーキテクチャ](http://www.slideshare.net/MayuKimura/css-25547100)
+  * 参考：[悩まないコーディングをしよう！ OOCSS,SMACSSを用いた、読みやすくてメンテナブルなCSS設計（Sass対応）](http://www.slideshare.net/horiguchiseito/master-architecture-forcss)
+  * 参考：[SMACSS and Rails A Styleguide for the Asset Pipeline](http://blog.55minutes.com/2013/01/smacss-and-rails/)
+  * また、以下に記載するコーディングルールに縛られすぎないこと。
+  * 柔軟に対応することを意識する。
+* app/assets/stylesheets 内は以下のようにcssファイルを配置する。
+```
+  app/assets/stylesheets
+    |- application.css
+    |- base.css.scss //量が多ければ分割を検討
+    |- /globals
+    |   |- _all.css.scss
+    |   |- _functions.css.scss
+    |   |- _mixins.css.scss
+    |   |- _variables.css.scss
+    |
+    |- /layouts
+    |   |- header.css.scss
+    |   |- footer.css.scss
+    |   |- ...
+    |
+    |- /modules
+        |- button.css.scss
+        |- heading.css.scss
+        |- ...
+```
 
-## HTML（slim）について
+
+## HTML（slim）記法について
 * マルチメディアの要素には代替コンテンツを提供する(alt="説明"を書く)こと。
   * 装飾的な要素の画像にはalt=""としておくこと。
 
@@ -52,7 +75,7 @@ class名、id名、Sassの変数名等に利用する変数名はBEMをカスタ
 
 * 他、随時気づいた点から追記
 
-## CSS（Sass）について
+## CSS（Sass）記法について
 * プロパティ宣言の```:```の後ろにはスペースを入れる。
 * ルール宣言の```{```の前にはスペースを入れる。
 * すべてのプロパティの終端にはセミコロンを書く。
