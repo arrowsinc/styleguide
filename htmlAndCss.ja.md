@@ -125,9 +125,10 @@ p {
 ```sass
 // good
 color: #fff;
+color: #e761a4;
 color: rgba(0, 0, 0, 0.8);
 
-//bad
+//bad（省略できるものは省略するよう心がける）
 color: #ffffff;
 ```
 
