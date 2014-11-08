@@ -277,7 +277,3 @@ $color_btn-pushed: darken($color_btn, 10%);
   }
 }
 ```
-
-## 制作時メモ
-Google Document(リンク共有)  
-https://docs.google.com/document/d/1FCapUqci-wAkBxSu3tFD_3cucoWzlCA-XNlQzHJ81gw/edit?usp=sharing
