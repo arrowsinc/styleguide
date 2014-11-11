@@ -13,9 +13,9 @@ for Rails project of LOUPE
 LOUPEの[Ruby Coding Guide / 基本](https://github.com/lo-upe/styleguide/blob/master/ruby.ja.md)の項目に準じる。
 
 ## コミット前に気をつけること
-scssファイルを修正/追加したら、scss-lint を実行するように心がける。
-設定ファイルscss_lint.ymlは各プロジェクトに保持させたものを使う。
-理不尽な怒られ方をした場合、scss_lint.ymlの問題かもしれないので、相談する。
+scssファイルを修正/追加したら、scss-lint を実行するように心がける。  
+設定ファイルscss_lint.ymlは各プロジェクトに保持させたものを使う。  
+scss-lintさんに理不尽な怒られ方をした場合は、scss_lint.ymlの問題かもしれないので、相談する。  
 
 ## ファイル配置
 Ruby on Rails Guides に従う。
