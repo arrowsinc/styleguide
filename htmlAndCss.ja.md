@@ -172,23 +172,8 @@ color: #ffffff;
 
 ## Sassの特徴的な利用方法について
 * 参考：[CSS-TRICKS / Sass Style Guide](http://css-tricks.com/sass-style-guide/)
-* @extend(s)は最初に書く。
-* 次に通常のスタイルを書く。
-* 次に@include(s)を書く。
-* セレクタは常に入れ子の内部（できるだけ最後）に書くよう心がける。
 
-```sass
-// good
-.weather {
-  @extends  %module;
-  background: LightCyan;
-  @include transition(all 0.3x ease-out);
-  > h3 {
-    border-bottom: 1px solid white;
-    @include transform(rotate(90deg));
-  }
-}
-```
+* @extend(s), @include(s), 他通常スタイルの表記順は scss-lint が通るようにする。（DeclarationOrder)
 
 * ネストは３つまでに抑える。
   * 3つ以上になるときはやり過ぎで修正する必要があると考える。
