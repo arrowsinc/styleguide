@@ -51,6 +51,7 @@ end
 
 # bad
 {hoge: 1, fuga: 2}
+{ :hoge => 1, :fuga => 2 }
 ```
 
 ## 条件式
